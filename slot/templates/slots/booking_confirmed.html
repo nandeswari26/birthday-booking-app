@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking Confirmed</title>
+  <link rel="stylesheet" href="{% static 'css/confirm.css' %}">
+</head>
+<body>
+  <div class="container">
+    <a href="#" onclick="history.back()" style="text-decoration: none; color: black;">&lt; Back</a>
+
+    <h2 class="title">🎉 <span>Booking Confirmed!</span></h2>
+    <p class="subtitle">Your party is scheduled for:</p>
+
+    <div class="details">
+      <p><strong>Date:</strong> 14-08-2025</p>
+      <p><strong>Time Slot: </strong>Evening(5 PM - 7 PM) </p>
+      <p><strong>Package:</strong> Princess</p>
+      <p><strong>Booking ID:</strong> #{{ booking_id }}</p>
+    </div>
+
+    <button class="confirm-btn">Confirm Booking</button>
+  </div>
+</body>
+</html>

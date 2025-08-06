@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=390, height=844, initial-scale=1.0" />
+  <title>Welcome</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <span><h4>Book Slot</h4></span>
+    <span><h4>Book Now</h4></span>
+  </div>
+
+  <h2 class="headline">Plan Your Kid’s<br>Perfect Birthday Party!</h2>
+
+  <img src="{% static 'images/birthday-party.png' %}" class="party-img" alt="Party Image" />
+
+  <div class="button-container">
+    <a href="{% url 'select_slot' %}">Book a Slot</a>
+    <!-- <div>
+
+    <button class="slot-btn">Book a slot</button>-->
+  </div>
+
+
+    <footer class="footer">
+      <p>© 2025 BirthdaySlot. Make your day magical! ✨</p>
+    </footer>
+  </div>
+  </div>
+</div>
+</body>
+</html>

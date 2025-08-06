@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking Details</title>
+  <link rel="stylesheet" href="{% static 'css/booking_details.css' %}">
+  <style>
+    .step-header {
+      font-size: 12px;
+      color: gray;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      color: purple;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .theme-options {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 15px;
+    }
+
+    .theme {
+      text-align: center;
+    }
+
+    .theme img {
+      width: 80px;
+      height: 100px;
+      border-radius: 10px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0;
+      border-radius: 8px;
+      border: none;
+      background-color: #ddd;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #d6007f;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .back-step, .step-counter {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .back-step {
+      float: left;
+      color: black;
+    }
+
+    .step-counter {
+      float: right;
+      color: black;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="clearfix">
+      <a class="back-step" href="#" onclick="history.back()" style="text-decoration: none;">&lt; Back</a>
+      <div class="step-counter">Step 3 of 4</div>
+    </div>
+
+    <div class="step-header">Step 3 of 4</div>
+    <h2>Booking Details</h2>
+
+    <div class="theme-options">
+      <div class="theme">
+        <img src="{% static 'images/princess.png' %}" alt="Princess">
+        <div>Princess</div>
+      </div>
+      <div class="theme">
+        <img src="{% static 'images/superhero.png' %}" alt="Superhero">
+        <div>Superhero</div>
+      </div>
+      <div class="theme">
+        <img src="{% static 'images/jungle.png' %}" alt="Jungle">
+        <div>Jungle</div>
+      </div>
+    </div>
+
+    <form method="post">
+      {% csrf_token %}
+      <input type="text" name="name" placeholder="Enter your name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="phone" placeholder="Phone" required>
+      <input type="text" name="child_name" placeholder="Child's Name" required>
+      <input type="text" name="about" placeholder="About">
+      <textarea name="notes" placeholder="Special Notes" rows="2"></textarea>
+      <button type="submit">Next</button>
+    </form>
+  </div>
+</body>
+</html>

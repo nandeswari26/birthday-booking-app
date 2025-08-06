@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Date</title>
+    <link rel="stylesheet" href="{% static 'css/select_slot.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-row">
+            <a href="#" class="back-link">&lt; Back</a>
+            <span class="step">Step 2 of 4</span>
+        </div>
+
+        <h2 class="main-title">Select Date</h2>
+
+        <h3 class="section-title">Select Date slot</h3>
+        <p class="calendar-title">&lt; <strong>Calendar</strong> &gt;</p>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="date-picker">
+                <label>Select Date</label>
+                <input type="text" id="selected_date" name="selected_date" required>
+            </div>
+
+            <h3 class="section-title">Select Slot & Timings</h3>
+
+            <label><input type="radio" name="slot" value="morning"> Morning    (10 AM - 12 PM)</label><br>
+            <label><input type="radio" name="slot" value="afternoon"> Afternoon    (1 PM - 3 PM)</label><br>
+            <label><input type="radio" name="slot" value="evening"> Evening    (5 PM - 7 PM)</label><br><br>
+
+            <button type="submit" class="next-btn">Next</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("#selected_date", {
+            minDate: "01-01-2000",
+            dateFormat: "d-m-y"
+
+        });
+    </script>
+</body>
+</html>

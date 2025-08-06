@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+  background: url("../images/bookingdetails.png") no-repeat center;
+  background-size: cover;
+
+  /* Align container to the left */
+  display: flex;
+  justify-content: flex-start;   /* Align to the left */
+  align-items: center;           /* Vertically centered */
+  padding-left: 60px;            /* Space from the left edge */
+  overflow-x: hidden;
+}
+
+.container {
+  width: 360px;
+  background-color: #ecf9f2;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: left; /* <<< Align all child text/content to left */
+}
+
+h2, .step-header, .step-counter, .back-step {
+  text-align: left; /* <<< Ensure headings/steps are left-aligned */
+  margin-bottom: 10px;
+}
+
+.theme-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.theme {
+  text-align: center; /* Keep images/text under them centered if desired */
+}
+
+input, textarea, button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
