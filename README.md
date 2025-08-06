@@ -51,5 +51,4 @@ A user-friendly Django web application that allows users to book birthday party 
 
 1. **Clone the repository**  
 ```bash
-git clone <your-repo-url>
-cd birthday-slot-booking
+https://github.com/nandeswari26/birthday-booking-app.git
