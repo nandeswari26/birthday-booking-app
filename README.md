@@ -9,22 +9,22 @@ A user-friendly Django web application that allows users to book birthday party 
 ## 📸 Screenshots
 
 ### 1. Welcome Page
-![WELCOME](Screenshots/WELCOME.png)
+![WELCOME](Screenshots/welcome.png)
 
 ### 2. Signup Page
-![SIGNUP](Screenshots/SIGNUP.png)
+![SIGNUP](Screenshots/signup.png)
 
 ### 3. Login Page
-![LOGIN](Screenshots/LOGIN.png)
+![LOGIN](Screenshots/login.png)
 
 ### 4. Select Slot Page
-![SELECTSLOT](Screenshots/SELECTSLOT.png)
+![SELECTSLOT](Screenshots/selectslot.png)
 
 ### 5. Booking Details Page
-![BOOKINGDETAILS](Screenshots/BOOKINGDETAILS.png)
+![BOOKINGDETAILS](Screenshots/bookingdetails.png)
 
 ### 6. Booking Confirmed Page
-![BOOKINGCONFIRMED](Screenshots/BOOKINGCONFIRMED.png)
+![BOOKINGCONFIRMED](Screenshots/bookingconfirmed.png)
 
 ---
 
